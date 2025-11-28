@@ -25,7 +25,7 @@ export function Hero({ dict }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto space-y-8"
+          className="max-w-4xl mx-auto space-y-6 sm:space-y-8"
         >
           {/* Label */}
           <motion.div 
@@ -44,7 +44,7 @@ export function Hero({ dict }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-heading text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight"
+            className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight px-2 sm:px-0"
           >
             {dict.hero.title}
             <br />
@@ -56,7 +56,7 @@ export function Hero({ dict }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-normal"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-normal px-2 sm:px-0"
           >
             {dict.hero.subtitle}
           </motion.p>
@@ -94,7 +94,7 @@ export function Hero({ dict }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="pt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-300 font-normal"
+            className="pt-8 sm:pt-12 flex flex-wrap justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-300 font-normal px-4"
           >
             {dict.hero.trustSignals.map((signal: string, index: number) => (
               <div key={index} className="flex items-center gap-2">
