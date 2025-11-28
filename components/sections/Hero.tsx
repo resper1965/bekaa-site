@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 interface HeroProps {
   dict: any;
@@ -12,19 +11,7 @@ interface HeroProps {
 export function Hero({ dict }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy via-gray-dark to-navy pt-20">
-      {/* Window Image Background */}
-      <div className="absolute inset-0 opacity-[0.08]">
-        <Image
-          src="/window.png"
-          alt=""
-          fill
-          className="object-cover mix-blend-soft-light"
-          priority
-          quality={90}
-        />
-      </div>
-
-      {/* Background Pattern Overlay */}
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 2px 2px, rgba(196, 167, 74, 0.15) 1px, transparent 0)`,

@@ -14,19 +14,27 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Detect locale from cookie or header
+  // Detect locale from cookie, header, or default to 'en'
   const localeCookie = request.cookies.get('NEXT_LOCALE')?.value
   const acceptLanguage = request.headers.get('accept-language') || ''
   
   let locale = 'en'
+  
+  // Priority: cookie > accept-language header > default
   if (localeCookie && (localeCookie === 'pt' || localeCookie === 'en')) {
     locale = localeCookie
-  } else if (acceptLanguage.toLowerCase().includes('pt')) {
-    locale = 'pt'
+  } else if (acceptLanguage) {
+    // Check for Portuguese in accept-language (pt, pt-BR, pt-PT, etc.)
+    const langLower = acceptLanguage.toLowerCase()
+    if (langLower.includes('pt')) {
+      locale = 'pt'
+    }
   }
 
   // Redirect to locale path
-  return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url))
+  const url = request.nextUrl.clone()
+  url.pathname = `/${locale}${pathname}`
+  return NextResponse.redirect(url)
 }
 
 export const config = {
