@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin } from "lucide-react";
 
 interface FooterProps {
   dict: any;
@@ -63,6 +63,18 @@ export function Footer({ dict }: FooterProps) {
                 <a href="mailto:contact@bekaa.eu" className="text-gray-300 hover:text-gold transition-colors flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   contact@bekaa.eu
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.linkedin.com/company/bekaa-trusted-advisors/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-gold transition-colors flex items-center gap-2"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
                 </a>
               </li>
             </ul>

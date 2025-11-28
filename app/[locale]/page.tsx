@@ -37,7 +37,9 @@ export default async function Home({
       contactType: 'Customer Service',
       availableLanguage: ['English', 'Portuguese'],
     },
-    sameAs: [],
+    sameAs: [
+      'https://www.linkedin.com/company/bekaa-trusted-advisors/',
+    ],
   }
 
   const professionalServiceSchema = {
