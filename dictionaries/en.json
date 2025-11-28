@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "label": "Strategic Advisory in Cybersecurity & Corporate Intelligence",
+    "title": "Independent counsel for",
+    "titleAccent": "complex security challenges",
+    "subtitle": "We work alongside CEOs, CISOs, CTOs and Boards, providing strategic advisory on cyber crises, reputation management, fraud investigations, and AI governance.",
+    "ctaPrimary": "Get in Touch",
+    "ctaSecondary": "Our Services",
+    "trustSignals": [
+      "25+ Years Experience",
+      "Portugal & Brasil",
+      "Vendor-Agnostic"
+    ]
+  },
+  "services": {
+    "label": "What We Do",
+    "title": "Strategic Advisory Services",
+    "subtitle": "Strategic advisory across cybersecurity, privacy, corporate intelligence, and AI governance.",
+    "items": [
+      {
+        "title": "Cyber Crisis Advisory",
+        "description": "When a security incident strikes, we help you navigate the critical decisions—coordinating response, managing stakeholders, and protecting what matters most."
+      },
+      {
+        "title": "Reputation Management",
+        "description": "Strategic counsel for protecting organizational reputation during digital crises. We guide your communication strategy and stakeholder confidence recovery."
+      },
+      {
+        "title": "Fraud Investigation",
+        "description": "Independent advisory on structuring internal fraud investigations. We help establish governance frameworks and guide remediation approaches."
+      },
+      {
+        "title": "AI Governance",
+        "description": "Practical guidance on AI adoption, governance frameworks, and risk management. We help you navigate opportunities while managing emerging risks."
+      },
+      {
+        "title": "Security & Privacy",
+        "description": "Advisory on cybersecurity governance, risk posture, and privacy compliance. Independent perspective on your security strategy and LGPD/GDPR matters."
+      },
+      {
+        "title": "Trusted Advisor",
+        "description": "Ongoing strategic partnership with your leadership team. Think of us as an extension of your advisory board for cyber, privacy, and corporate intelligence matters."
+      }
+    ]
+  },
+  "privacy": {
+    "label": "Privacy & Data Protection",
+    "title": "Your Privacy Matters",
+    "subtitle": "We take data protection seriously and operate in full compliance with LGPD and GDPR.",
+    "points": [
+      {
+        "title": "Data Protection",
+        "description": "Your information is protected under LGPD (Brazil) and GDPR (Europe) regulations."
+      },
+      {
+        "title": "Confidentiality",
+        "description": "All consultations and advisory engagements are conducted under strict confidentiality agreements."
+      },
+      {
+        "title": "Compliance",
+        "description": "We maintain compliance with international privacy standards and industry best practices."
+      },
+      {
+        "title": "Your Rights",
+        "description": "You have full rights to access, modify, or request deletion of your personal data at any time."
+      }
+    ],
+    "statement": {
+      "title": "Our Commitment to Privacy",
+      "paragraphs": [
+        "Bekaa operates under strict privacy and data protection standards. When you engage with us, your personal and business information is handled with the highest level of confidentiality.",
+        "We collect only essential information necessary for our advisory services and never share your data with third parties without explicit consent. All data processing complies with Lei Geral de Proteção de Dados (LGPD) in Brazil and General Data Protection Regulation (GDPR) in Europe.",
+        "For our full privacy policy or to exercise your data rights, please contact us at privacy@bekaa.eu"
+      ]
+    },
+    "policyLink": "Full Privacy Policy"
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title": "Let's Talk",
+    "subtitle": "Reach out for a confidential conversation about your strategic challenges.",
+    "brasil": "Brasil",
+    "portugal": "Portugal",
+    "europeOps": "European Operations",
+    "email": {
+      "title": "Email Us",
+      "subtitle": "For confidential inquiries and advisory consultations"
+    }
+  },
+  "footer": {
+    "tagline": "Strategic advisory for leadership teams on cybersecurity, privacy, and corporate intelligence.",
+    "location": "Portugal & Brasil",
+    "navigation": "Navigation",
+    "services": "Services",
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "rights": "© 2024 Bekaa. All rights reserved."
+  },
+  "nav": {
+    "services": "Services",
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch"
+  }
+}

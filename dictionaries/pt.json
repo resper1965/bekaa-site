@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "label": "Consultoria Estratégica em Cibersegurança e Inteligência Corporativa",
+    "title": "Aconselhamento independente para",
+    "titleAccent": "desafios complexos de segurança",
+    "subtitle": "Trabalhamos ao lado de CEOs, CISOs, CTOs e Conselhos, fornecendo consultoria estratégica em crises cibernéticas, gestão de reputação, investigações de fraude e governança de IA.",
+    "ctaPrimary": "Entre em Contato",
+    "ctaSecondary": "Nossos Serviços",
+    "trustSignals": [
+      "25+ Anos de Experiência",
+      "Portugal & Brasil",
+      "Independente de Fornecedores"
+    ]
+  },
+  "services": {
+    "label": "O Que Fazemos",
+    "title": "Serviços de Consultoria Estratégica",
+    "subtitle": "Consultoria estratégica em cibersegurança, privacidade, inteligência corporativa e governança de IA.",
+    "items": [
+      {
+        "title": "Consultoria em Crises Cibernéticas",
+        "description": "Quando um incidente de segurança ocorre, ajudamos você a navegar pelas decisões críticas—coordenando a resposta, gerenciando stakeholders e protegendo o que é mais importante."
+      },
+      {
+        "title": "Gestão de Reputação",
+        "description": "Aconselhamento estratégico para proteger a reputação organizacional durante crises digitais. Orientamos sua estratégia de comunicação e recuperação da confiança dos stakeholders."
+      },
+      {
+        "title": "Investigação de Fraudes",
+        "description": "Consultoria independente sobre estruturação de investigações internas de fraude. Ajudamos a estabelecer frameworks de governança e orientar abordagens de remediação."
+      },
+      {
+        "title": "Governança de IA",
+        "description": "Orientação prática sobre adoção de IA, frameworks de governança e gestão de riscos. Ajudamos você a navegar oportunidades enquanto gerencia riscos emergentes."
+      },
+      {
+        "title": "Segurança & Privacidade",
+        "description": "Consultoria em governança de cibersegurança, postura de risco e conformidade com privacidade. Perspectiva independente sobre sua estratégia de segurança e questões de LGPD/GDPR."
+      },
+      {
+        "title": "Consultor de Confiança",
+        "description": "Parceria estratégica contínua com sua equipe de liderança. Pense em nós como uma extensão do seu conselho consultivo para questões de cibersegurança, privacidade e inteligência corporativa."
+      }
+    ]
+  },
+  "privacy": {
+    "label": "Privacidade & Proteção de Dados",
+    "title": "Sua Privacidade Importa",
+    "subtitle": "Levamos a proteção de dados a sério e operamos em total conformidade com a LGPD e GDPR.",
+    "points": [
+      {
+        "title": "Proteção de Dados",
+        "description": "Suas informações são protegidas sob as regulamentações LGPD (Brasil) e GDPR (Europa)."
+      },
+      {
+        "title": "Confidencialidade",
+        "description": "Todas as consultas e engajamentos de consultoria são conduzidos sob rigorosos acordos de confidencialidade."
+      },
+      {
+        "title": "Conformidade",
+        "description": "Mantemos conformidade com padrões internacionais de privacidade e melhores práticas da indústria."
+      },
+      {
+        "title": "Seus Direitos",
+        "description": "Você tem direito total de acessar, modificar ou solicitar a exclusão de seus dados pessoais a qualquer momento."
+      }
+    ],
+    "statement": {
+      "title": "Nosso Compromisso com a Privacidade",
+      "paragraphs": [
+        "A Bekaa opera sob rigorosos padrões de privacidade e proteção de dados. Quando você nos contrata, suas informações pessoais e empresariais são tratadas com o mais alto nível de confidencialidade.",
+        "Coletamos apenas informações essenciais necessárias para nossos serviços de consultoria e nunca compartilhamos seus dados com terceiros sem consentimento explícito. Todo processamento de dados está em conformidade com a Lei Geral de Proteção de Dados (LGPD) no Brasil e o Regulamento Geral de Proteção de Dados (GDPR) na Europa.",
+        "Para nossa política de privacidade completa ou para exercer seus direitos sobre dados, entre em contato conosco em privacy@bekaa.eu"
+      ]
+    },
+    "policyLink": "Política de Privacidade Completa"
+  },
+  "contact": {
+    "label": "Entre em Contato",
+    "title": "Vamos Conversar",
+    "subtitle": "Entre em contato para uma conversa confidencial sobre seus desafios estratégicos.",
+    "brasil": "Brasil",
+    "portugal": "Portugal",
+    "europeOps": "Operações Europeias",
+    "email": {
+      "title": "Envie um Email",
+      "subtitle": "Para consultas confidenciais e consultorias"
+    }
+  },
+  "footer": {
+    "tagline": "Consultoria estratégica para equipes de liderança em cibersegurança, privacidade e inteligência corporativa.",
+    "location": "Portugal & Brasil",
+    "navigation": "Navegação",
+    "services": "Serviços",
+    "privacy": "Privacidade",
+    "contact": "Contato",
+    "rights": "© 2024 Bekaa. Todos os direitos reservados."
+  },
+  "nav": {
+    "services": "Serviços",
+    "privacy": "Privacidade",
+    "contact": "Contato",
+    "getInTouch": "Entre em Contato"
+  }
+}
