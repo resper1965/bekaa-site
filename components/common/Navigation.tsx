@@ -36,22 +36,15 @@ export function Navigation({ dict, locale }: NavigationProps) {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-navy/95 backdrop-blur-sm border-b border-gray-800' 
-        : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center">
-            <Image
-              src="/BEKAA_transparent.png"
+            <img
+              src="/bekaa.svg"
               alt="Bekaa"
-              width={140}
-              height={50}
-              priority
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
@@ -59,11 +52,7 @@ export function Navigation({ dict, locale }: NavigationProps) {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#services"
-              className={`transition-colors font-normal ${
-                isScrolled 
-                  ? 'text-gray-300 hover:text-gold' 
-                  : 'text-gray-600 hover:text-gold'
-              }`}
+              className="text-gray-300 hover:text-gold transition-colors font-normal"
             >
               {dict.nav.services}
             </a>
@@ -81,24 +70,20 @@ export function Navigation({ dict, locale }: NavigationProps) {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-300' : 'text-gray-700'}`} />
+              <X className="w-6 h-6 text-gray-300" />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-300' : 'text-gray-700'}`} />
+              <Menu className="w-6 h-6 text-gray-300" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className={`md:hidden py-4 border-t ${isScrolled ? 'border-gray-800' : 'border-gray-100'}`}>
+          <div className="md:hidden py-4 border-t border-gray-800">
             <div className="flex flex-col space-y-4">
               <a
                 href="#services"
-                className={`transition-colors font-normal ${
-                  isScrolled 
-                    ? 'text-gray-300 hover:text-gold' 
-                    : 'text-gray-600 hover:text-gold'
-                }`}
+                className="text-gray-300 hover:text-gold transition-colors font-normal"
                 onClick={() => setIsOpen(false)}
               >
                 {dict.nav.services}
