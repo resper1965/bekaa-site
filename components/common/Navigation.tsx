@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
@@ -15,7 +15,17 @@ interface NavigationProps {
 
 export function Navigation({ dict, locale }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const switchLocale = (newLocale: Locale) => {
     // Store locale preference
@@ -26,11 +36,15 @@ export function Navigation({ dict, locale }: NavigationProps) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-navy/95 backdrop-blur-sm border-b border-gray-800' 
+        : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'
+    }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex flex-col">
+          <Link href={`/${locale}`} className="flex items-center">
             <Image
               src="/BEKAA_transparent.png"
               alt="Bekaa"
@@ -39,28 +53,19 @@ export function Navigation({ dict, locale }: NavigationProps) {
               priority
               className="h-10 w-auto"
             />
-            <span className="text-xs text-gray-500 font-normal mt-1">Trusted Advisors</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#services"
-              className="text-gray-600 hover:text-gold transition-colors font-normal"
+              className={`transition-colors font-normal ${
+                isScrolled 
+                  ? 'text-gray-300 hover:text-gold' 
+                  : 'text-gray-600 hover:text-gold'
+              }`}
             >
               {dict.nav.services}
-            </a>
-            <a
-              href="#privacy"
-              className="text-gray-600 hover:text-gold transition-colors font-normal"
-            >
-              {dict.nav.privacy}
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-600 hover:text-gold transition-colors font-normal"
-            >
-              {dict.nav.contact}
             </a>
 
             {/* CTA Button */}
@@ -76,37 +81,27 @@ export function Navigation({ dict, locale }: NavigationProps) {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-300' : 'text-gray-700'}`} />
             ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-300' : 'text-gray-700'}`} />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+          <div className={`md:hidden py-4 border-t ${isScrolled ? 'border-gray-800' : 'border-gray-100'}`}>
             <div className="flex flex-col space-y-4">
               <a
                 href="#services"
-                className="text-gray-600 hover:text-gold transition-colors font-normal"
+                className={`transition-colors font-normal ${
+                  isScrolled 
+                    ? 'text-gray-300 hover:text-gold' 
+                    : 'text-gray-600 hover:text-gold'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {dict.nav.services}
-              </a>
-              <a
-                href="#privacy"
-                className="text-gray-600 hover:text-gold transition-colors font-normal"
-                onClick={() => setIsOpen(false)}
-              >
-                {dict.nav.privacy}
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-600 hover:text-gold transition-colors font-normal"
-                onClick={() => setIsOpen(false)}
-              >
-                {dict.nav.contact}
               </a>
 
               <Button className="w-full mt-4" asChild>

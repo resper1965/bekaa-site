@@ -11,12 +11,9 @@ export function Footer({ dict }: FooterProps) {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-2">
-            <h3 className="font-heading text-2xl font-semibold mb-2 text-gold">
+            <h3 className="font-heading text-2xl font-semibold mb-4 text-gold">
               Bekaa
             </h3>
-            <p className="text-gray-300 text-sm font-normal mb-4">
-              Trusted Advisors
-            </p>
             <p className="text-gray-400 text-sm font-normal mb-6">
               {dict.footer.tagline}
             </p>
@@ -55,11 +52,6 @@ export function Footer({ dict }: FooterProps) {
               <li>
                 <a href="#services" className="text-gray-300 hover:text-gold transition-colors">
                   {dict.footer.services}
-                </a>
-              </li>
-              <li>
-                <a href="#privacy" className="text-gray-300 hover:text-gold transition-colors">
-                  {dict.footer.privacy}
                 </a>
               </li>
               <li>
