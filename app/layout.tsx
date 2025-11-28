@@ -56,6 +56,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
+      <head>
+        <link rel="canonical" href="https://bekaa.eu" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0F172A" />
+        <meta name="format-detection" content="telephone=no" />
+      </head>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

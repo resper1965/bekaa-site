@@ -40,11 +40,13 @@ export function Navigation({ dict, locale }: NavigationProps) {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center">
+          <Link href={`/${locale}`} className="flex items-center" aria-label="Bekaa - Home">
             <img
               src="/bekaa.svg"
-              alt="Bekaa"
+              alt="Bekaa - Strategic Cybersecurity & Corporate Intelligence Advisors"
               className="h-12 w-auto"
+              width="187"
+              height="75"
             />
           </Link>
 
