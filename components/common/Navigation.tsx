@@ -52,16 +52,22 @@ export function Navigation({ dict, locale }: NavigationProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#services"
+            <Link
+              href={`/${locale}/services`}
               className="text-gray-300 hover:text-gold transition-colors font-normal"
             >
               {dict.nav.services}
-            </a>
+            </Link>
+            <Link
+              href={`/${locale}/about`}
+              className="text-gray-300 hover:text-gold transition-colors font-normal"
+            >
+              {dict.nav.about}
+            </Link>
 
             {/* CTA Button */}
             <Button size="sm" asChild>
-              <a href="#contact">{dict.nav.getInTouch}</a>
+              <Link href={`/${locale}/contact`}>{dict.nav.getInTouch}</Link>
             </Button>
           </div>
 
@@ -83,16 +89,23 @@ export function Navigation({ dict, locale }: NavigationProps) {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-800">
             <div className="flex flex-col space-y-4">
-              <a
-                href="#services"
+              <Link
+                href={`/${locale}/services`}
                 className="text-gray-300 hover:text-gold transition-colors font-normal"
                 onClick={() => setIsOpen(false)}
               >
                 {dict.nav.services}
-              </a>
+              </Link>
+              <Link
+                href={`/${locale}/about`}
+                className="text-gray-300 hover:text-gold transition-colors font-normal"
+                onClick={() => setIsOpen(false)}
+              >
+                {dict.nav.about}
+              </Link>
 
               <Button className="w-full mt-4" asChild>
-                <a href="#contact">{dict.nav.getInTouch}</a>
+                <Link href={`/${locale}/contact`}>{dict.nav.getInTouch}</Link>
               </Button>
             </div>
           </div>
