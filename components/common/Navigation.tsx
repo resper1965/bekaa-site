@@ -114,8 +114,8 @@ export function Navigation({ dict, locale }: NavigationProps) {
 
       {/* Discrete Language Switcher - Bottom Right */}
       <div className={`fixed bottom-6 right-6 z-40 transition-opacity ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-        <div className="bg-white/95 backdrop-blur-sm rounded-full shadow-lg border border-gray-200 px-3 py-2 flex items-center gap-2">
-          <Globe className="w-4 h-4 text-gray-500" />
+        <div className="bg-white/95 backdrop-blur-sm rounded-full shadow-lg border border-gray-200 px-3 py-2 flex items-center gap-1">
+          <Globe className="w-4 h-4 text-gray-500 mr-1" />
           <button
             onClick={() => switchLocale('en')}
             className={`text-xs px-2 py-1 rounded-full transition-all font-normal ${
@@ -135,6 +135,26 @@ export function Navigation({ dict, locale }: NavigationProps) {
             }`}
           >
             PT
+          </button>
+          <button
+            onClick={() => switchLocale('es')}
+            className={`text-xs px-2 py-1 rounded-full transition-all font-normal ${
+              locale === 'es'
+                ? "bg-gold text-white"
+                : "text-gray-600 hover:text-gold hover:bg-gold/10"
+            }`}
+          >
+            ES
+          </button>
+          <button
+            onClick={() => switchLocale('fr')}
+            className={`text-xs px-2 py-1 rounded-full transition-all font-normal ${
+              locale === 'fr'
+                ? "bg-gold text-white"
+                : "text-gray-600 hover:text-gold hover:bg-gold/10"
+            }`}
+          >
+            FR
           </button>
         </div>
       </div>
