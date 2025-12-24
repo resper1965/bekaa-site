@@ -46,6 +46,8 @@ export async function generateMetadata({
       languages: {
         'en': `${baseUrl}/en/services/${params.slug}`,
         'pt': `${baseUrl}/pt/services/${params.slug}`,
+        'es': `${baseUrl}/es/services/${params.slug}`,
+        'fr': `${baseUrl}/fr/services/${params.slug}`,
       },
     },
     openGraph: {
@@ -96,7 +98,8 @@ export default async function ServicePage({
     }
   }
 
-  const pageLabels = labels[locale]
+  const labelsLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
+  const pageLabels = labels[labelsLocale as 'en' | 'pt']
 
   return (
     <>

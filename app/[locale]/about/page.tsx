@@ -8,14 +8,18 @@ import type { Metadata } from 'next'
 export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const baseUrl = 'https://bekaa.eu'
   
-  const titles = {
+  const titles: Record<Locale, string> = {
     en: "About Us | Bekaa Strategic Advisory",
     pt: "Sobre Nós | Bekaa Consultoria Estratégica",
+    es: "Nosotros | Bekaa Asesoría Estratégica",
+    fr: "À Propos | Bekaa Conseil Stratégique",
   }
   
-  const descriptions = {
+  const descriptions: Record<Locale, string> = {
     en: "Bekaa is a strategic advisory firm specializing in cybersecurity, corporate intelligence, and governance. 35+ years of combined experience serving boards and executives across Portugal and Brazil.",
     pt: "Bekaa é uma empresa de consultoria estratégica especializada em cibersegurança, inteligência corporativa e governança. 35+ anos de experiência combinada servindo conselhos e executivos em Portugal e Brasil.",
+    es: "Bekaa es una firma de asesoría estratégica especializada en ciberseguridad, inteligencia corporativa y gobernanza. 35+ años de experiencia combinada sirviendo a consejos y ejecutivos en Portugal y Brasil.",
+    fr: "Bekaa est un cabinet de conseil stratégique spécialisé en cybersécurité, intelligence d'entreprise et gouvernance. 35+ ans d'expérience combinée au service des conseils et dirigeants au Portugal et au Brésil.",
   }
 
   return {
@@ -26,6 +30,8 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
       languages: {
         'en': `${baseUrl}/en/about`,
         'pt': `${baseUrl}/pt/about`,
+        'es': `${baseUrl}/es/about`,
+        'fr': `${baseUrl}/fr/about`,
       },
     },
     openGraph: {
@@ -162,7 +168,9 @@ export default async function AboutPage({
   params: { locale: Locale }
 }) {
   const dict = await getDictionary(locale)
-  const pageContent = content[locale]
+  // Fallback to EN for ES/FR until translations are added
+  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
+  const pageContent = content[contentLocale as 'en' | 'pt']
 
   return (
     <>

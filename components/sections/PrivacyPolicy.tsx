@@ -201,7 +201,8 @@ const content = {
 };
 
 export function PrivacyPolicy({ locale }: { locale: Locale }) {
-  const text = content[locale];
+  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
+  const text = content[contentLocale as 'en' | 'pt'];
 
   return (
     <section className="py-24 bg-white">

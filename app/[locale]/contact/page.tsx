@@ -10,14 +10,18 @@ import type { Metadata } from 'next'
 export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const baseUrl = 'https://bekaa.eu'
   
-  const titles = {
+  const titles: Record<Locale, string> = {
     en: "Contact | Bekaa Strategic Advisory",
     pt: "Contato | Bekaa Consultoria Estratégica",
+    es: "Contacto | Bekaa Asesoría Estratégica",
+    fr: "Contact | Bekaa Conseil Stratégique",
   }
   
-  const descriptions = {
+  const descriptions: Record<Locale, string> = {
     en: "Get in touch with Bekaa for strategic advisory on cybersecurity, crisis management, and governance. Schedule a meeting or send us a message.",
     pt: "Entre em contato com a Bekaa para consultoria estratégica em cibersegurança, gestão de crises e governança. Agende uma reunião ou envie uma mensagem.",
+    es: "Póngase en contacto con Bekaa para asesoría estratégica en ciberseguridad, gestión de crisis y gobernanza.",
+    fr: "Contactez Bekaa pour un conseil stratégique en cybersécurité, gestion de crise et gouvernance.",
   }
 
   return {
@@ -28,6 +32,8 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
       languages: {
         'en': `${baseUrl}/en/contact`,
         'pt': `${baseUrl}/pt/contact`,
+        'es': `${baseUrl}/es/contact`,
+        'fr': `${baseUrl}/fr/contact`,
       },
     },
     openGraph: {
@@ -119,7 +125,8 @@ export default async function ContactPage({
   params: { locale: Locale }
 }) {
   const dict = await getDictionary(locale)
-  const pageContent = content[locale]
+  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
+  const pageContent = content[contentLocale as 'en' | 'pt']
 
   return (
     <>

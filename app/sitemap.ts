@@ -4,7 +4,7 @@ import { getAllServiceSlugs } from '@/lib/services'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bekaa.eu'
   const currentDate = new Date().toISOString()
-  const locales = ['en', 'pt']
+  const locales = ['en', 'pt', 'es', 'fr']
   const serviceSlugs = getAllServiceSlugs()
 
   const staticPages = [

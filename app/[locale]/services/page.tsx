@@ -21,14 +21,18 @@ const iconMap: Record<string, any> = {
 export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const baseUrl = 'https://bekaa.eu'
   
-  const titles = {
+  const titles: Record<Locale, string> = {
     en: "Services | Bekaa Strategic Advisory",
     pt: "Serviços | Bekaa Consultoria Estratégica",
+    es: "Servicios | Bekaa Asesoría Estratégica",
+    fr: "Services | Bekaa Conseil Stratégique",
   }
   
-  const descriptions = {
+  const descriptions: Record<Locale, string> = {
     en: "Strategic advisory services in cybersecurity, crisis management, fraud investigation, AI governance, and more. Expert guidance for boards and C-suite executives.",
     pt: "Serviços de consultoria estratégica em cibersegurança, gestão de crises, investigação de fraudes, governança de IA e mais. Orientação especializada para conselhos e executivos C-level.",
+    es: "Servicios de asesoría estratégica en ciberseguridad, gestión de crisis, investigación de fraudes, gobernanza de IA y más. Orientación experta para consejos y ejecutivos C-level.",
+    fr: "Services de conseil stratégique en cybersécurité, gestion de crise, enquêtes de fraude, gouvernance IA et plus. Conseils experts pour conseils d'administration et dirigeants.",
   }
 
   return {
@@ -39,6 +43,8 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
       languages: {
         'en': `${baseUrl}/en/services`,
         'pt': `${baseUrl}/pt/services`,
+        'es': `${baseUrl}/es/services`,
+        'fr': `${baseUrl}/fr/services`,
       },
     },
     openGraph: {
@@ -79,7 +85,8 @@ export default async function ServicesPage({
     }
   }
 
-  const pageContent = content[locale]
+  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
+  const pageContent = content[contentLocale as 'en' | 'pt']
 
   return (
     <>

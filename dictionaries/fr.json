@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "label": "Conseil Stratégique en Cybersécurité et Intelligence d'Entreprise",
+    "title": "Conseil indépendant pour",
+    "titleAccent": "les défis complexes de sécurité",
+    "subtitle": "Nous travaillons aux côtés des PDG, RSSI, CTO et Conseils d'Administration, fournissant des conseils stratégiques sur les crises cyber, la gestion de réputation, les enquêtes de fraude et la gouvernance de l'IA.",
+    "ctaPrimary": "Contactez-nous",
+    "ctaSecondary": "Nos Services",
+    "trustSignals": [
+      "35+ Ans d'Expérience",
+      "Portugal & Brésil",
+      "Indépendant des Fournisseurs"
+    ]
+  },
+  "services": {
+    "label": "Ce Que Nous Faisons",
+    "title": "Services de Conseil Stratégique",
+    "subtitle": "Conseil stratégique en cybersécurité, confidentialité, intelligence d'entreprise et gouvernance de l'IA.",
+    "items": [
+      {
+        "title": "Conseil en Crises Cyber",
+        "description": "Lorsqu'un incident de sécurité survient, nous vous aidons à naviguer les décisions critiques—coordonner la réponse, gérer les parties prenantes et protéger l'essentiel."
+      },
+      {
+        "title": "Gestion de Réputation",
+        "description": "Conseil stratégique pour protéger la réputation organisationnelle pendant les crises numériques. Nous guidons votre stratégie de communication et la récupération de confiance."
+      },
+      {
+        "title": "Enquêtes de Fraude",
+        "description": "Conseil indépendant pour structurer les enquêtes internes de fraude. Nous aidons à établir des cadres de gouvernance et guider les approches de remédiation."
+      },
+      {
+        "title": "Gouvernance de l'IA",
+        "description": "Conseils pratiques sur l'adoption de l'IA, les cadres de gouvernance et la gestion des risques. Nous vous aidons à naviguer les opportunités tout en gérant les risques émergents."
+      },
+      {
+        "title": "Sécurité et Confidentialité",
+        "description": "Conseil en gouvernance de cybersécurité, posture de risque et conformité de confidentialité. Perspective indépendante sur votre stratégie de sécurité et les questions LGPD/RGPD."
+      },
+      {
+        "title": "Conseiller de Confiance",
+        "description": "Partenariat stratégique continu avec votre équipe de direction. Pensez à nous comme une extension de votre conseil consultatif pour les questions de cyber, confidentialité et intelligence d'entreprise."
+      }
+    ]
+  },
+  "privacy": {
+    "label": "Confidentialité et Protection des Données",
+    "title": "Votre Vie Privée Compte",
+    "subtitle": "Nous prenons la protection des données au sérieux et opérons en pleine conformité avec LGPD et RGPD.",
+    "points": [
+      {
+        "title": "Protection des Données",
+        "description": "Vos informations sont protégées par les réglementations LGPD (Brésil) et RGPD (Europe)."
+      },
+      {
+        "title": "Confidentialité",
+        "description": "Toutes les consultations et engagements de conseil sont menés sous des accords de confidentialité stricts."
+      },
+      {
+        "title": "Conformité",
+        "description": "Nous maintenons la conformité avec les normes internationales de confidentialité et les meilleures pratiques de l'industrie."
+      },
+      {
+        "title": "Vos Droits",
+        "description": "Vous avez le plein droit d'accéder, modifier ou demander la suppression de vos données personnelles à tout moment."
+      }
+    ],
+    "statement": {
+      "title": "Notre Engagement envers la Confidentialité",
+      "paragraphs": [
+        "Bekaa opère selon des normes strictes de confidentialité et de protection des données. Lorsque vous nous engagez, vos informations personnelles et professionnelles sont traitées avec le plus haut niveau de confidentialité.",
+        "Nous collectons uniquement les informations essentielles nécessaires à nos services de conseil et ne partageons jamais vos données avec des tiers sans consentement explicite. Tout traitement de données est conforme à la Lei Geral de Proteção de Dados (LGPD) au Brésil et au Règlement Général sur la Protection des Données (RGPD) en Europe.",
+        "Pour notre politique de confidentialité complète ou pour exercer vos droits sur les données, contactez-nous à privacy@bekaa.eu"
+      ]
+    },
+    "policyLink": "Politique de Confidentialité Complète"
+  },
+  "contact": {
+    "label": "Contactez-nous",
+    "title": "Parlons",
+    "subtitle": "Contactez-nous pour une conversation confidentielle sur vos défis stratégiques.",
+    "brasil": "Brésil",
+    "portugal": "Portugal",
+    "europeOps": "Opérations Européennes",
+    "email": {
+      "title": "Envoyez-nous un Email",
+      "subtitle": "Pour les demandes confidentielles et consultations de conseil"
+    }
+  },
+  "footer": {
+    "tagline": "Conseil stratégique pour les équipes de direction en cybersécurité, confidentialité et intelligence d'entreprise.",
+    "location": "Portugal & Brésil",
+    "navigation": "Navigation",
+    "services": "Services",
+    "privacy": "Confidentialité",
+    "contact": "Contact",
+    "rights": "© 2024 Bekaa. Tous droits réservés."
+  },
+  "nav": {
+    "services": "Services",
+    "about": "À Propos",
+    "privacy": "Confidentialité",
+    "contact": "Contact",
+    "getInTouch": "Contactez-nous"
+  }
+}
