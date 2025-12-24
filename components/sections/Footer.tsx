@@ -11,9 +11,11 @@ export function Footer({ dict }: FooterProps) {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-2">
-            <h3 className="font-heading text-2xl font-semibold mb-4 text-gold">
-              Bekaa
-            </h3>
+            <img
+              src="/bekaa.svg"
+              alt="Bekaa"
+              className="h-10 w-auto mb-4"
+            />
             <p className="text-gray-400 text-sm font-normal mb-6">
               {dict.footer.tagline}
             </p>
