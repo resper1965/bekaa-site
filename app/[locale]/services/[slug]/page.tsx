@@ -95,11 +95,32 @@ export default async function ServicePage({
         subtitle: "Agende uma conversa confidencial para discutir suas necessidades específicas.",
         button: "Agendar Reunião"
       }
+    },
+    es: {
+      backToServices: "Volver a Servicios",
+      theProblem: "El Desafío",
+      benefits: "Beneficios Clave",
+      deliverables: "Lo Que Recibe",
+      cta: {
+        title: "¿Listo para abordar este desafío?",
+        subtitle: "Agende una conversación confidencial para discutir sus necesidades específicas.",
+        button: "Agendar Reunión"
+      }
+    },
+    fr: {
+      backToServices: "Retour aux Services",
+      theProblem: "Le Défi",
+      benefits: "Avantages Clés",
+      deliverables: "Ce Que Vous Recevez",
+      cta: {
+        title: "Prêt à relever ce défi?",
+        subtitle: "Planifiez une conversation confidentielle pour discuter de vos besoins spécifiques.",
+        button: "Planifier une Réunion"
+      }
     }
   }
 
-  const labelsLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
-  const pageLabels = labels[labelsLocale as 'en' | 'pt']
+  const pageLabels = labels[locale]
 
   return (
     <>

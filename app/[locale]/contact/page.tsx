@@ -116,6 +116,78 @@ const content = {
       linkedin: "Siga-nos no LinkedIn",
       email: "Envie um email"
     }
+  },
+  es: {
+    label: "Contacto",
+    title: "Hablemos",
+    subtitle: "Elija cómo le gustaría conectarse con nosotros. Estamos aquí para ayudar con sus desafíos estratégicos.",
+    options: {
+      meeting: {
+        icon: "Calendar",
+        title: "Agendar Reunión",
+        description: "Reserve una conversación confidencial con nuestro equipo asesor. Discutiremos sus desafíos y exploraremos cómo podemos ayudar.",
+        button: "Agendar Ahora"
+      },
+      email: {
+        icon: "MessageSquare",
+        title: "Enviar Mensaje",
+        description: "¿Prefiere contacto por email? Envíenos un mensaje y responderemos en 24 horas.",
+        button: "contact@bekaa.eu"
+      }
+    },
+    offices: {
+      title: "Nuestras Oficinas",
+      brasil: {
+        title: "Brasil",
+        address: ["Rua Conceição de Monte Alegre, 107", "Bloco A, Conj 82", "São Paulo - SP", "CEP 04563-060"],
+        phone: "+55 11 99383-3122"
+      },
+      portugal: {
+        title: "Portugal",
+        description: "Operaciones en Europa"
+      }
+    },
+    connect: {
+      title: "Conéctese Con Nosotros",
+      linkedin: "Síganos en LinkedIn",
+      email: "Envíenos un email"
+    }
+  },
+  fr: {
+    label: "Contact",
+    title: "Parlons",
+    subtitle: "Choisissez comment vous souhaitez nous contacter. Nous sommes là pour vous aider avec vos défis stratégiques.",
+    options: {
+      meeting: {
+        icon: "Calendar",
+        title: "Planifier une Réunion",
+        description: "Réservez une conversation confidentielle avec notre équipe de conseil. Nous discuterons de vos défis et explorerons comment nous pouvons vous aider.",
+        button: "Planifier Maintenant"
+      },
+      email: {
+        icon: "MessageSquare",
+        title: "Envoyer un Message",
+        description: "Préférez-vous nous contacter par email? Envoyez-nous un message et nous répondrons sous 24 heures.",
+        button: "contact@bekaa.eu"
+      }
+    },
+    offices: {
+      title: "Nos Bureaux",
+      brasil: {
+        title: "Brésil",
+        address: ["Rua Conceição de Monte Alegre, 107", "Bloco A, Conj 82", "São Paulo - SP", "CEP 04563-060"],
+        phone: "+55 11 99383-3122"
+      },
+      portugal: {
+        title: "Portugal",
+        description: "Opérations en Europe"
+      }
+    },
+    connect: {
+      title: "Connectez-vous Avec Nous",
+      linkedin: "Suivez-nous sur LinkedIn",
+      email: "Envoyez-nous un email"
+    }
   }
 }
 
@@ -125,8 +197,8 @@ export default async function ContactPage({
   params: { locale: Locale }
 }) {
   const dict = await getDictionary(locale)
-  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
-  const pageContent = content[contentLocale as 'en' | 'pt']
+  const pageContent = content[locale]
+
 
   return (
     <>

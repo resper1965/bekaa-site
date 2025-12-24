@@ -152,6 +152,116 @@ const content = {
       subtitle: "Agende uma reunião confidencial para discutir como podemos ajudar.",
       button: "Agendar Reunião"
     }
+  },
+  es: {
+    label: "Sobre Bekaa",
+    title: "Asesores de Confianza para Desafíos Complejos",
+    subtitle: "Proporcionamos asesoramiento estratégico independiente a equipos de liderazgo que navegan desafíos de seguridad, privacidad y gobernanza.",
+    mission: {
+      title: "Nuestra Misión",
+      description: "Ser el asesor de confianza al que los equipos de liderazgo recurren al enfrentar sus desafíos más complejos de seguridad y gobernanza. Creemos que el asesoramiento independiente y experimentado es esencial para una toma de decisiones sólida."
+    },
+    values: {
+      title: "Nuestros Valores",
+      items: [
+        {
+          icon: "Target",
+          title: "Independencia",
+          description: "No tenemos afiliaciones con proveedores ni agendas de productos. Nuestro consejo está guiado únicamente por sus mejores intereses."
+        },
+        {
+          icon: "Heart",
+          title: "Discreción",
+          description: "Manejamos asuntos sensibles con la máxima confidencialidad. La confianza es la base de todo lo que hacemos."
+        },
+        {
+          icon: "Handshake",
+          title: "Alianza",
+          description: "Trabajamos a su lado, no por encima de usted. Su éxito es nuestro éxito."
+        },
+        {
+          icon: "Award",
+          title: "Excelencia",
+          description: "Aportamos décadas de experiencia y aprendizaje continuo a cada compromiso."
+        }
+      ]
+    },
+    presence: {
+      title: "Nuestra Presencia",
+      description: "Con operaciones en Portugal y Brasil, atendemos clientes en toda Europa y América Latina. Nuestra experiencia multicultural nos permite navegar diversos entornos regulatorios.",
+      locations: ["São Paulo, Brasil", "Lisboa, Portugal"]
+    },
+    experience: {
+      title: "35+ Años de Experiencia Combinada",
+      areas: [
+        "Liderazgo en Ciberseguridad",
+        "Gestión de Crisis",
+        "Asesoría de Consejo",
+        "Cumplimiento Regulatorio",
+        "Inteligencia Corporativa",
+        "Gobernanza de IA"
+      ]
+    },
+    cta: {
+      title: "Iniciemos una conversación",
+      subtitle: "Agende una reunión confidencial para discutir cómo podemos ayudar.",
+      button: "Agendar Reunión"
+    }
+  },
+  fr: {
+    label: "À Propos de Bekaa",
+    title: "Conseillers de Confiance pour Défis Complexes",
+    subtitle: "Nous fournissons des conseils stratégiques indépendants aux équipes de direction naviguant les défis de sécurité, confidentialité et gouvernance.",
+    mission: {
+      title: "Notre Mission",
+      description: "Être le conseiller de confiance vers lequel les équipes de direction se tournent face à leurs défis les plus complexes de sécurité et governance. Nous croyons qu'un conseil indépendant et expérimenté est essentiel pour une prise de décision solide."
+    },
+    values: {
+      title: "Nos Valeurs",
+      items: [
+        {
+          icon: "Target",
+          title: "Indépendance",
+          description: "Nous n'avons aucune affiliation avec des fournisseurs ni agenda produit. Nos conseils sont guidés uniquement par vos intérêts."
+        },
+        {
+          icon: "Heart",
+          title: "Discrétion",
+          description: "Nous traitons les sujets sensibles avec la plus grande confidentialité. La confiance est le fondement de tout ce que nous faisons."
+        },
+        {
+          icon: "Handshake",
+          title: "Partenariat",
+          description: "Nous travaillons à vos côtés, pas au-dessus de vous. Votre succès est notre succès."
+        },
+        {
+          icon: "Award",
+          title: "Excellence",
+          description: "Nous apportons des décennies d'expérience et d'apprentissage continu à chaque mission."
+        }
+      ]
+    },
+    presence: {
+      title: "Notre Présence",
+      description: "Avec des opérations au Portugal et au Brésil, nous servons des clients à travers l'Europe et l'Amérique latine. Notre expérience multiculturelle nous permet de naviguer divers environnements réglementaires.",
+      locations: ["São Paulo, Brésil", "Lisbonne, Portugal"]
+    },
+    experience: {
+      title: "35+ Ans d'Expérience Combinée",
+      areas: [
+        "Leadership en Cybersécurité",
+        "Gestion de Crise",
+        "Conseil d'Administration",
+        "Conformité Réglementaire",
+        "Intelligence d'Entreprise",
+        "Gouvernance IA"
+      ]
+    },
+    cta: {
+      title: "Démarrons une conversation",
+      subtitle: "Planifiez une réunion confidentielle pour discuter de comment nous pouvons vous aider.",
+      button: "Planifier une Réunion"
+    }
   }
 }
 
@@ -168,9 +278,7 @@ export default async function AboutPage({
   params: { locale: Locale }
 }) {
   const dict = await getDictionary(locale)
-  // Fallback to EN for ES/FR until translations are added
-  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
-  const pageContent = content[contentLocale as 'en' | 'pt']
+  const pageContent = content[locale]
 
   return (
     <>

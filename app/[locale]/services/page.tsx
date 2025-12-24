@@ -82,11 +82,30 @@ export default async function ServicesPage({
         subtitle: "Agende uma conversa confidencial com nossa equipe.",
         button: "Agendar Reunião"
       }
+    },
+    es: {
+      label: "Lo Que Hacemos",
+      title: "Servicios de Asesoría Estratégica",
+      subtitle: "Asesoramiento independiente para desafíos complejos de seguridad, privacidad y gobernanza. Trabajamos junto a equipos de liderazgo para navegar decisiones críticas.",
+      cta: {
+        title: "¿Listo para discutir sus desafíos?",
+        subtitle: "Agende una conversación confidencial con nuestro equipo.",
+        button: "Agendar Reunión"
+      }
+    },
+    fr: {
+      label: "Ce Que Nous Faisons",
+      title: "Services de Conseil Stratégique",
+      subtitle: "Conseil indépendant pour les défis complexes de sécurité, confidentialité et gouvernance. Nous travaillons aux côtés des équipes de direction pour naviguer les décisions critiques.",
+      cta: {
+        title: "Prêt à discuter de vos défis?",
+        subtitle: "Planifiez une conversation confidentielle avec notre équipe.",
+        button: "Planifier une Réunion"
+      }
     }
   }
 
-  const contentLocale = (locale === 'es' || locale === 'fr') ? 'en' : locale
-  const pageContent = content[contentLocale as 'en' | 'pt']
+  const pageContent = content[locale]
 
   return (
     <>
